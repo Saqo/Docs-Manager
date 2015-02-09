@@ -13,11 +13,6 @@ namespace Server.Modules
         public RegistrationModule()
         {
             Get["/Reg"] = parameters => { return View["Views/Registration/Form.html"]; };
-            {
-                // Called when the user visits the login page or is redirected here because
-                // an attempt was made to access a restricted resource. It should return
-                // the view that contains the login form
-            };
 
             Post["/Reg"] = parameters =>
             {

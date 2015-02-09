@@ -15,10 +15,7 @@ namespace Server
     {
         public LoginModule()
         {
-            Get["/Login"] = param =>
-            {
-                return View["Views/Login/Form.html"];
-            };
+            Get["/Login"] = param => { return View["Views/Login/Form.html"]; };
 
             Post["/Login"] = param =>
             {
@@ -35,10 +32,7 @@ namespace Server
                     throw new ArgumentException("Invalid username or password");
             };
 
-            Get["/Logout"] = param =>
-            {
-                return this.LogoutAndRedirect("~/");
-            };
+            Get["/Logout"] = param => { return this.LogoutAndRedirect("~/"); };
         }
     }
 }

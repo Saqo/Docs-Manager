@@ -20,21 +20,11 @@ namespace Server.Modules
             this.RequiresAuthentication();
             this.RequiresAnyClaim(new[] { "Users", "Admins" });
 
-            Get["/"] = param =>
-            {
-                return View["Views/Documents/Index.html"];
-            };
+            Get["/"] = param => { return View["Views/Documents/Index.html"]; };
 
-            Get["/UserDocs/{id}"] = param =>
-            {
-                
-                return GetUserDocs((Guid)param.id);
-            };
+            Get["/UserDocs/{id}"] = param => { return GetUserDocs((Guid)param.id); };
 
-            Get["/Add"] = param =>
-            {
-                return View["Views/Documents/Form.html"];
-            };
+            Get["/Add"] = param => { return View["Views/Documents/Form.html"]; };
 
             Post["/Add"] = param =>
             {
@@ -53,7 +43,6 @@ namespace Server.Modules
             {
                 DocumentsContext ctx = new DocumentsContext();
                 IEnumerable<Document> docs = ctx.GetAllByUserId(userId);
-
                 Nancy.Response resp = new Nancy.Responses.JsonResponse<IEnumerable<Document>>(docs, new DefaultJsonSerializer());
                 return resp;
             }
