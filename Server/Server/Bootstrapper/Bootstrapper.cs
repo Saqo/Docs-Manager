@@ -36,9 +36,9 @@ namespace Server.Bootstrapper
         protected override void ConfigureConventions(NancyConventions nancyConventions)
         {
             base.ConfigureConventions(nancyConventions);
-            nancyConventions.StaticContentsConventions.Clear();
-            nancyConventions.StaticContentsConventions.Add(
-            StaticContentConventionBuilder.AddDirectory("/Scripts", "/Content", new[] { ".js" }));
+            //nancyConventions.StaticContentsConventions.Clear();
+            //nancyConventions.StaticContentsConventions.Add(
+            //StaticContentConventionBuilder.AddDirectory("/Scripts", "/Content", new[] { ".js" }));
         }
     }
 }

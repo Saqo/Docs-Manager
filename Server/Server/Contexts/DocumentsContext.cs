@@ -14,7 +14,7 @@ namespace Server.Contexts
         private PetaPoco.Database DB = PetaPocoDBManager.GetDatabase();
         public IEnumerable<Document> GetAllByUserId(Guid id)
         {
-            String sql = "select * from Documents where Id ='" + id + "'";
+            String sql = "select * from Documents where UserId ='" + id + "'";
             return DB.Query<Document>(sql);
         }
 

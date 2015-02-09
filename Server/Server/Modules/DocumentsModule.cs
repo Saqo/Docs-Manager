@@ -13,7 +13,7 @@ using Nancy.Responses;
 
 namespace Server.Modules
 {
-    class DocumentsModule : NancyModule
+    public class DocumentsModule : NancyModule
     {
         public DocumentsModule()
         {
@@ -25,10 +25,10 @@ namespace Server.Modules
                 return View["Views/Documents/Index.html"];
             };
 
-            Get["/UserDocs?{id}"] = param =>
+            Get["/UserDocs/{id}"] = param =>
             {
-
-                return GetUserDocs(param);
+                
+                return GetUserDocs((Guid)param.id);
             };
 
             Get["/Add"] = param =>
