@@ -10,7 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Server.Nancy
+namespace Server.Bootstrapper
 {
     public class Bootstrapper : DefaultNancyBootstrapper
     {
@@ -37,8 +37,8 @@ namespace Server.Nancy
         {
             base.ConfigureConventions(nancyConventions);
             nancyConventions.StaticContentsConventions.Clear();
-            //nancyConventions.StaticContentsConventions.Add(
-            //StaticContentConventionBuilder.AddDirectory("/Scripts", "/Content", new[] { ".js" }));
+            nancyConventions.StaticContentsConventions.Add(
+            StaticContentConventionBuilder.AddDirectory("/Scripts", "/Content", new[] { ".js" }));
         }
     }
 }

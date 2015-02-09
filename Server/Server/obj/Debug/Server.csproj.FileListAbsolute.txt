@@ -1,1 +1,17 @@
 D:\Саркис\Обучение\Университет ( МГГУ )\4 курс\1 семестр\МПП\Лабы\example1\Server\Server\bin\Debug\Server.exe.config
+C:\Users\Sparko\Documents\GitHub\Docs-Manager\Server\Server\bin\Debug\Server.exe.config
+C:\Users\Sparko\Documents\GitHub\Docs-Manager\Server\Server\obj\Debug\Server.csprojResolveAssemblyReference.cache
+C:\Users\Sparko\Documents\GitHub\Docs-Manager\Server\Server\bin\Debug\Server.exe
+C:\Users\Sparko\Documents\GitHub\Docs-Manager\Server\Server\bin\Debug\Server.pdb
+C:\Users\Sparko\Documents\GitHub\Docs-Manager\Server\Server\bin\Debug\Nancy.Authentication.Forms.dll
+C:\Users\Sparko\Documents\GitHub\Docs-Manager\Server\Server\bin\Debug\Nancy.dll
+C:\Users\Sparko\Documents\GitHub\Docs-Manager\Server\Server\bin\Debug\Nancy.Hosting.Self.dll
+C:\Users\Sparko\Documents\GitHub\Docs-Manager\Server\Server\bin\Debug\Nancy.xml
+C:\Users\Sparko\Documents\GitHub\Docs-Manager\Server\Server\bin\Debug\Nancy.Authentication.Forms.xml
+C:\Users\Sparko\Documents\GitHub\Docs-Manager\Server\Server\bin\Debug\Nancy.Hosting.Self.xml
+C:\Users\Sparko\Documents\GitHub\Docs-Manager\Server\Server\obj\Debug\Server.exe
+C:\Users\Sparko\Documents\GitHub\Docs-Manager\Server\Server\obj\Debug\Server.pdb
+C:\Users\Sparko\Documents\GitHub\Docs-Manager\Server\Server\bin\Debug\Views\Documents\Index.html
+C:\Users\Sparko\Documents\GitHub\Docs-Manager\Server\Server\bin\Debug\Views\Login\Form.html
+C:\Users\Sparko\Documents\GitHub\Docs-Manager\Server\Server\bin\Debug\Views\Documents\Form.html
+C:\Users\Sparko\Documents\GitHub\Docs-Manager\Server\Server\bin\Debug\Views\Registration\Form.html

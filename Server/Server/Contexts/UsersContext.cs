@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Server.Contexts
 {
-    class UsersContext : IUserMapper
+    public class UsersContext : IUserMapper
     {
         private PetaPoco.Database DB = PetaPocoDBManager.GetDatabase();
         public IUserIdentity GetUserFromIdentifier(Guid id, NancyContext ctx)

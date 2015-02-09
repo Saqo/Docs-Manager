@@ -5,8 +5,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Nancy;
+using Nancy.ModelBinding;
 using Server.Models;
 using Server.Contexts;
+using Server;
 using Nancy.Responses;
 
 namespace Server.Modules
@@ -45,7 +47,7 @@ namespace Server.Modules
             };
         }
 
-        Nancy.Response GetUserDocs(Guid userId)
+        Response GetUserDocs(Guid userId)
         {
             try
             {
