@@ -35,7 +35,7 @@ namespace Server
             {
                 UrlReservations = new UrlReservations() { CreateAutomatically = true },
                 AllowChunkedEncoding = false
-            }, new Uri("http://localhost:8080"));
+            }, new Uri("http://localhost:9900"));
             Host.Start();
             Console.WriteLine("Server started");
             Console.ReadLine();

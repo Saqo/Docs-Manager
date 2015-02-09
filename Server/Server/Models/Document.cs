@@ -11,7 +11,9 @@ namespace Server.Models
     [PetaPoco.PrimaryKey("Id")]
     public class Document
     {
-        public Guid Id { get; set; }
+        public Int64 Id { get; set; }
         public String Title { get; set; }
+        public String Description { get; set; }
+        public Guid UserId { get; set; }
     }
 }
