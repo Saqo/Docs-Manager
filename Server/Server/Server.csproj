@@ -66,6 +66,7 @@
     <Compile Include="Modules\DocumentsModule.cs" />
     <Compile Include="Modules\LoginModule.cs" />
     <Compile Include="Modules\RegistrationModule.cs" />
+    <Compile Include="Nancy\Bootstrapper.cs" />
     <Compile Include="ORM\PetaPoco.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -90,6 +91,10 @@
     <Content Include="Views\Registration\Form.html">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Content\css\" />
+    <Folder Include="Content\js\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
