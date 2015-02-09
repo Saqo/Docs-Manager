@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Server.Contexts
 {
-    class DocumentsContext
+    public class DocumentsContext
     {
         private PetaPoco.Database DB = PetaPocoDBManager.GetDatabase();
         public IEnumerable<Document> GetAllByUserId(Guid id)

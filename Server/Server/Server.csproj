@@ -62,8 +62,10 @@
     <Compile Include="Models\Document.cs" />
     <Compile Include="Models\RegistrationUser.cs" />
     <Compile Include="Models\User.cs" />
+    <Compile Include="Modules\AdminModule.cs" />
     <Compile Include="Modules\DocumentsModule.cs" />
     <Compile Include="Modules\LoginModule.cs" />
+    <Compile Include="Modules\RegistrationModule.cs" />
     <Compile Include="ORM\PetaPoco.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -76,10 +78,16 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Views\Documents\Form.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Views\Documents\Index.html">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Views\Login\Form.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\Registration\Form.html">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
