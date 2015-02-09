@@ -56,6 +56,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Contexts\DocumentsContext.cs" />
+    <Compile Include="Contexts\PetaPocoDBManager.cs" />
+    <Compile Include="Contexts\UsersContext.cs" />
     <Compile Include="DB\DBManager.cs" />
     <Compile Include="Models\Document.cs" />
     <Compile Include="Models\RegistrationUser.cs" />
