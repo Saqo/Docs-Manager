@@ -15,3 +15,11 @@ C:\Users\Sparko\Documents\GitHub\Docs-Manager\Server\Server\bin\Debug\Views\Docu
 C:\Users\Sparko\Documents\GitHub\Docs-Manager\Server\Server\bin\Debug\Views\Login\Form.html
 C:\Users\Sparko\Documents\GitHub\Docs-Manager\Server\Server\bin\Debug\Views\Documents\Form.html
 C:\Users\Sparko\Documents\GitHub\Docs-Manager\Server\Server\bin\Debug\Views\Registration\Form.html
+C:\Users\Sparko\Documents\GitHub\Docs-Manager\Server\Server\bin\Debug\Content\js\jquery-1.11.2.js
+C:\Users\Sparko\Documents\GitHub\Docs-Manager\Server\Server\bin\Debug\Content\js\jquery-1.11.2.min.js
+C:\Users\Sparko\Documents\GitHub\Docs-Manager\Server\Server\bin\Debug\Content\bootstrap\css\bootstrap-theme.css
+C:\Users\Sparko\Documents\GitHub\Docs-Manager\Server\Server\bin\Debug\Content\bootstrap\css\bootstrap-theme.min.css
+C:\Users\Sparko\Documents\GitHub\Docs-Manager\Server\Server\bin\Debug\Content\bootstrap\css\bootstrap.css
+C:\Users\Sparko\Documents\GitHub\Docs-Manager\Server\Server\bin\Debug\Content\bootstrap\css\bootstrap.min.css
+C:\Users\Sparko\Documents\GitHub\Docs-Manager\Server\Server\bin\Debug\Content\bootstrap\css\bootstrap-theme.css.map
+C:\Users\Sparko\Documents\GitHub\Docs-Manager\Server\Server\bin\Debug\Content\bootstrap\css\bootstrap.css.map
