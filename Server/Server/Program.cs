@@ -1,5 +1,4 @@
 ﻿using Nancy.Hosting.Self;
-using Server.DB;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -7,30 +6,34 @@ using Nancy.Bootstrapper;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Runtime.Remoting.Contexts;
+using Server.Models;
+using Server.Repositories;
+using Ninject;
+using DependencyResolver;
 
 namespace Server
 {
     class Program
     {
+        public static readonly IKernel NinjectKernel = new StandardKernel(new ContextModule());
         public const string DBFileName = "DocsManager";
         static void Main(string[] args)
         {
 
-            string DBFullFileName = DBManager.GetDBFileFullName(DBFileName);
-            if (!File.Exists(DBFullFileName + ".mdf"))
+            using (IUserRepository ctx = NinjectKernel.Get<IUserRepository>())
             {
-                //DBManager.DropDocumentsTable(DBFileName);
-                //DBManager.DropUsersTable(DBFileName);
-                //DBManager.DropDatabase(DBFileName);
-                DBManager.CreateDatabase(DBFileName, DBFullFileName);
-                DBManager.CreateUsersTable(DBFileName);
-                DBManager.CreateDocumentsTable(DBFileName);
-                DBManager.InsertUser("Nikolay", "Password2", true, DBFileName);
-                //DBManager.InsertUser("Alex", "Password1", "False", DBFileName);
-                //DBManager.InsertUser("Paul", "Password3", "False", DBFileName);
-                //DBManager.InsertUser("Petr", "Password4", "False", DBFileName);
-                //DBManager.InsertUser("George", "IAMADMIN", "True", DBFileName);
+                ctx.Add(new RegistrationUser()
+                {
+                    Id = Guid.NewGuid(),
+                    IsAdmin = true,
+                    Password = "Password2",
+                    UserName = "Nikolay"
+                });
+                ctx.SaveChanges();
             }
+
+
 
             NancyHost Host = new NancyHost(new HostConfiguration()
             {

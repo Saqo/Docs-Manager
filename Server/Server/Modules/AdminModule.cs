@@ -1,11 +1,14 @@
 ﻿using Nancy;
 using Nancy.Security;
 using Nancy.Authentication.Forms;
+using Ninject;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Server.Models;
+using Server.Repositories;
 using Server.Contexts;
 
 namespace Server.Modules
@@ -19,9 +22,11 @@ namespace Server.Modules
 
             Delete["/delete"] = p =>
             {
-                DocumentsContext ctx = new DocumentsContext();
-                ctx.Delete(p);
-                return View["~/"];
+                using (IDocumentRepository ctx = Program.NinjectKernel.Get<IDocumentRepository>())
+                {
+                    ctx.Delete(p);
+                    return View["~/"];
+                }
             };
         }
     }

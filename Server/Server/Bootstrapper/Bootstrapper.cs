@@ -3,21 +3,33 @@ using Nancy.Authentication.Forms;
 using Nancy.Bootstrapper;
 using Nancy.Conventions;
 using Nancy.TinyIoc;
-using Server.Contexts;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Server.Repositories;
 using System.Threading.Tasks;
+using Server.Contexts;
+using Server.Models;
+using Ninject;
 
 namespace Server.Bootstrapper
 {
+
+    public class UserMapper:IUserMapper
+    {
+        public Nancy.Security.IUserIdentity GetUserFromIdentifier(Guid identifier, NancyContext context)
+        {
+
+            return (NancyUser)Program.NinjectKernel.Get<IUserRepository>().GetUserFromIdentifier(identifier);
+        }
+    }
     public class Bootstrapper : DefaultNancyBootstrapper
     {
         protected override void ConfigureRequestContainer(TinyIoCContainer container, NancyContext context)
         {
             base.ConfigureRequestContainer(container, context);
-            container.Register<IUserMapper, UsersContext>();
+            container.Register<IUserMapper, UserMapper>();
         }
 
         protected override void RequestStartup(TinyIoCContainer container, IPipelines pipelines, NancyContext context)

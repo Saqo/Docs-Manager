@@ -7,9 +7,11 @@ using System.Threading.Tasks;
 using Nancy;
 using Nancy.ModelBinding;
 using Server.Models;
-using Server.Contexts;
 using Server;
 using Nancy.Responses;
+using Server.Repositories;
+using Ninject;
+using Server.Contexts;
 
 namespace Server.Modules
 {
@@ -31,25 +33,34 @@ namespace Server.Modules
                 string title = (string)param.Request.Form.Title;
                 string description = (string)param.Request.Form.Description;
                 Guid userId = (Guid)param.Request.Form.UserId;
-                DocumentsContext ctx = new DocumentsContext();
-                ctx.Add(new Document() { Title = title, Description = description, UserId = userId });
-                return View["Views/Documents/Index.html"];
+                using (IDocumentRepository ctx = Program.NinjectKernel.Get<IDocumentRepository>())
+                {
+                    ctx.Add(new Document() { Title = title, Description = description });
+                    return View["Views/Documents/Index.html"];
+                }
             };
         }
 
         Response GetUserDocs(Guid userId)
         {
-            try
+
+
+            using (IDocumentRepository ctx = Program.NinjectKernel.Get<IDocumentRepository>())
             {
-                DocumentsContext ctx = new DocumentsContext();
-                IEnumerable<Document> docs = ctx.GetAllByUserId(userId);
-                Nancy.Response resp = new Nancy.Responses.JsonResponse<IEnumerable<Document>>(docs, new DefaultJsonSerializer());
-                return resp;
+                try
+                {
+                    IEnumerable<Document> docs = ctx.GetAllByUserId(userId);
+                    Nancy.Response resp = new Nancy.Responses.JsonResponse<IEnumerable<Document>>(docs, new DefaultJsonSerializer());
+                    return resp;
+                }
+                catch
+                {
+                    throw new Exception("Error on GetById");
+                }
+
             }
-            catch
-            {
-                throw new Exception("Error on GetById");
-            }
+
+
         }
     }
 }
