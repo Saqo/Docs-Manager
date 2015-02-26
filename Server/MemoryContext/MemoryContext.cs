@@ -42,7 +42,6 @@ namespace MemoryContext
             return null;
         }
 
-
         public void Dispose()
         {
         }
