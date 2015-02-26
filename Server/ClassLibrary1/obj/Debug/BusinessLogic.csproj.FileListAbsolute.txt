@@ -1,0 +1,10 @@
+C:\Users\s_agadzhanyan\Documents\GitHub\Docs-Manager\Server\ClassLibrary1\bin\Debug\ClassLibrary1.dll.config
+C:\Users\s_agadzhanyan\Documents\GitHub\Docs-Manager\Server\ClassLibrary1\bin\Debug\ClassLibrary1.dll
+C:\Users\s_agadzhanyan\Documents\GitHub\Docs-Manager\Server\ClassLibrary1\bin\Debug\ClassLibrary1.pdb
+C:\Users\s_agadzhanyan\Documents\GitHub\Docs-Manager\Server\ClassLibrary1\bin\Debug\Core.dll
+C:\Users\s_agadzhanyan\Documents\GitHub\Docs-Manager\Server\ClassLibrary1\bin\Debug\Ninject.dll
+C:\Users\s_agadzhanyan\Documents\GitHub\Docs-Manager\Server\ClassLibrary1\bin\Debug\Core.pdb
+C:\Users\s_agadzhanyan\Documents\GitHub\Docs-Manager\Server\ClassLibrary1\bin\Debug\Ninject.xml
+C:\Users\s_agadzhanyan\Documents\GitHub\Docs-Manager\Server\ClassLibrary1\obj\Debug\BusinessLogic.csprojResolveAssemblyReference.cache
+C:\Users\s_agadzhanyan\Documents\GitHub\Docs-Manager\Server\ClassLibrary1\obj\Debug\ClassLibrary1.dll
+C:\Users\s_agadzhanyan\Documents\GitHub\Docs-Manager\Server\ClassLibrary1\obj\Debug\ClassLibrary1.pdb

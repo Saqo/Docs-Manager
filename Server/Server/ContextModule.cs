@@ -9,14 +9,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Server.ORM;
 
-namespace DependencyResolver
+namespace Server
 {
     class ContextModule : NinjectModule
     {
         public override void Load()
         {
-            Bind<IDataContext>().To<MemoryContext.MemoryContext>();
+            Bind<IDataContext>().To<ConcreteContext>();
             Bind<IUserRepository>().To<UsersRepository>();
         }
     }

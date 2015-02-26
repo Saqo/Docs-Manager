@@ -10,7 +10,7 @@ using System.Runtime.Remoting.Contexts;
 using Server.Models;
 using Server.Repositories;
 using Ninject;
-using DependencyResolver;
+using Server;
 
 namespace Server
 {
