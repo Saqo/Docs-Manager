@@ -4,14 +4,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Core.Models;
+using Core.Repositories;
 using Nancy;
 using Nancy.ModelBinding;
 using Server.Models;
 using Server;
 using Nancy.Responses;
-using Server.Repositories;
 using Ninject;
-using Server.Contexts;
 
 namespace Server.Modules
 {

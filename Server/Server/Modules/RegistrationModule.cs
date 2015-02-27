@@ -1,13 +1,12 @@
 ﻿using Nancy;
-using Server.Contexts;
 using Server.Models;
-using Server.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Ninject;
 using System.Threading.Tasks;
+using Core.Repositories;
 
 namespace Server.Modules
 {

@@ -1,11 +1,6 @@
-﻿using Core;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Linq;
 
-namespace Server.Repositories
+namespace Core.Repositories
 {
     public class RepositoryBase<TEntity, TContext> : IRepositoryBase<TEntity>
         where TEntity : class

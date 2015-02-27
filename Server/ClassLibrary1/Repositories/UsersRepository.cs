@@ -1,13 +1,11 @@
-﻿using Core;
-using Server.Models;
-using Server.Repositories;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Core;
+using Core.Models;
+using Core.Repositories;
 
-namespace Server.Contexts
+namespace ClassLibrary1.Repositories
 {
     public class UsersRepository : RepositoryBase<RegistrationUser, IDataContext>, IUserRepository
     {

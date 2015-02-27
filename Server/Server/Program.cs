@@ -7,8 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Runtime.Remoting.Contexts;
+using Core.Models;
+using Core.Repositories;
 using Server.Models;
-using Server.Repositories;
 using Ninject;
 using Server;
 

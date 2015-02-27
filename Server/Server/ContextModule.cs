@@ -1,15 +1,15 @@
 ﻿using Core;
 using Ninject.Activation;
 using Ninject.Modules;
-using Server.Contexts;
 using Server.Models;
-using Server.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Server.ORM;
+using ClassLibrary1.Repositories;
+using Core.Repositories;
+using EFInfrastructure;
 
 namespace Server
 {
@@ -19,6 +19,7 @@ namespace Server
         {
             Bind<IDataContext>().To<ConcreteContext>();
             Bind<IUserRepository>().To<UsersRepository>();
+            Bind<IDocumentRepository>().To<DocumentsRepository>();
         }
     }
 }

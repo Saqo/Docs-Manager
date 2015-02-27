@@ -1,10 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Server.Repositories
+namespace Core.Repositories
 {
     public interface IRepositoryBase<TEntity> : IDisposable
     {

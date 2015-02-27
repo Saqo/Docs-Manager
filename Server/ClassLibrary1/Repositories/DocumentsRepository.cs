@@ -1,19 +1,16 @@
-﻿using Core;
-using Server.Models;
-using Server.Repositories;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Data.Common;
-using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Core;
+using Core.Models;
+using Core.Repositories;
 
-namespace Server.Contexts
+namespace ClassLibrary1.Repositories
 {
     public class DocumentsRepository : RepositoryBase<Document, IDataContext>, IDocumentRepository
     {
-        public DocumentsRepository(IDataContext context):base(context)
+        public DocumentsRepository(IDataContext context)
+            : base(context)
         {
 
         }

@@ -1,18 +1,11 @@
-﻿using Nancy;
-using Nancy.Security;
+﻿using System;
+using Core.Models;
+using Core.Repositories;
+using Nancy;
 using Nancy.Authentication.Forms;
-using Server.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Ninject;
-using System.Runtime.Remoting.Contexts;
-using Server.Repositories;
-using Server.Contexts;
 
-namespace Server
+namespace Server.Modules
 {
     public class LoginModule : NancyModule
     {

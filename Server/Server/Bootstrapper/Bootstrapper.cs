@@ -7,21 +7,19 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Server.Repositories;
 using System.Threading.Tasks;
-using Server.Contexts;
+using Core.Repositories;
 using Server.Models;
 using Ninject;
 
 namespace Server.Bootstrapper
 {
 
-    public class UserMapper:IUserMapper
+    public class UserMapper : IUserMapper
     {
         public Nancy.Security.IUserIdentity GetUserFromIdentifier(Guid identifier, NancyContext context)
         {
-
-            return (NancyUser)Program.NinjectKernel.Get<IUserRepository>().GetUserFromIdentifier(identifier);
+            return new NancyUser(Program.NinjectKernel.Get<IUserRepository>().GetUserFromIdentifier(identifier));
         }
     }
     public class Bootstrapper : DefaultNancyBootstrapper

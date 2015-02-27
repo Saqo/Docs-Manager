@@ -1,19 +1,15 @@
-﻿using Core;
-using Server.Models;
-using Server.Repositories;
-using System;
-using System.Collections.Generic;
+﻿using System;
 using System.Data.Entity;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Core;
+using Core.Models;
 
-namespace Server.ORM
+namespace EFInfrastructure
 {
     public class ConcreteContext : DbContext, IDataContext
     {
         public ConcreteContext()
-            : base("DocsManager")
+            : base("name=BaseContext")
         {
 
         }
@@ -39,6 +35,12 @@ namespace Server.ORM
         public new IQueryable<T> Set<T>() where T : class
         {
             return base.Set<T>() as IQueryable<T>;
+        }
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.HasDefaultSchema("public");
+            base.OnModelCreating(modelBuilder);
         }
     }
 }

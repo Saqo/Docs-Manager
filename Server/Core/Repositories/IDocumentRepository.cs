@@ -1,11 +1,8 @@
-﻿using Server.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Core.Models;
 
-namespace Server.Repositories
+namespace Core.Repositories
 {
     public interface IDocumentRepository : IRepositoryBase<Document>
     {
